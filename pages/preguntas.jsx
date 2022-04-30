@@ -7,7 +7,7 @@ const Preguntas = () => {
 
   useEffect(() => {
     async function socketInitializer() {
-      await fetch("https://twitch-questions.vercel.app/api/socket");
+      await fetch("/api/socket");
       socket = io();
 
       socket.on("connect", () => {
