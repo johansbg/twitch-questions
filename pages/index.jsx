@@ -8,8 +8,8 @@ const Home = () => {
 
   useEffect(() => {
     async function socketInitializer() {
-      await fetch("https://twitch-questions.vercel.app/api/socket");
-      socket = io();
+      await fetch("/api/socket");
+      socket = io("/");
 
       socket.on("connect", () => {
         console.log("connected");

@@ -8,7 +8,7 @@ const Preguntas = () => {
   useEffect(() => {
     async function socketInitializer() {
       await fetch("/api/socket");
-      socket = io();
+      socket = io("/");
 
       socket.on("connect", () => {
         console.log("connected");
