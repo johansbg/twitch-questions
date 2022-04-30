@@ -61,7 +61,7 @@ const Home = () => {
           </div>
         </div>
         <div className="text-center text-4xl text-white bg-gray-900  font-mono">
-          {index + 1 + "/" + chatMsg.length}
+          {(chatMsg.length > 0 ? index + 1 : "0") + "/" + chatMsg.length}
         </div>
       </div>
     </div>
