@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     async function socketInitializer() {
       await fetch("/api/socket");
-      socket = io("/api/socket");
+      socket = io();
 
       socket.on("connect", () => {
         console.log("connected");
